@@ -1,4 +1,5 @@
 spring:
+  messages: "This is from product-service dev environment"
   datasource:
     url: jdbc:mysql://localhost:3306/e-commerce-2024
     username: root
@@ -10,7 +11,20 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
+kafka:
+  bootstrap-servers: localhost:9092
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  consumer:
+    group-id: e-commerce
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+    json-value-type: com.app.*
+    trusted-packages: "*"
