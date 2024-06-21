@@ -25,6 +25,7 @@ kafka:
   consumer:
     group-id: e-commerce
     key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+    value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     json-value-type: com.app.*
     trusted-packages: "*"
+  
