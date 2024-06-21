@@ -1,4 +1,5 @@
 spring:
+  messages: "This is from order-service dev environment"
   datasource:
     url: jdbc:mysql://localhost:3306/e-commerce-2024
     username: root
