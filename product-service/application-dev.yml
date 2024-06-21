@@ -1,5 +1,4 @@
 spring:
-  messages: "This is from product-service dev environment"
   datasource:
     url: jdbc:mysql://localhost:3306/e-commerce-2024
     username: root
@@ -28,3 +27,6 @@ kafka:
     value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
     json-value-type: com.app.*
     trusted-packages: "*"
+product:
+  service:
+    env-message: "This is the development environment for Product Service"
