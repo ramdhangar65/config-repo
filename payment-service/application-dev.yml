@@ -1,4 +1,5 @@
 spring:
+  messages: "This is from payment-service dev environment"
   datasource:
     url: jdbc:mysql://localhost:3306/e-commerce-dev-2024
     username: root
@@ -24,9 +25,7 @@ kafka:
   consumer:
     group-id: e-commerce
     key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+    value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     json-value-type: com.app.*
     trusted-packages: "*"
-product:
-  service:
-    env-message: "This is the development environment for Product Service"
+  
