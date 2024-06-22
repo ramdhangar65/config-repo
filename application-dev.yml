@@ -1,6 +1,7 @@
 spring:
+  messages: "This is from order-service dev environment"
   datasource:
-    url: jdbc:mysql://localhost:3306/e-commerce-dev-2024
+    url: jdbc:mysql://localhost:3306/e-commerce-dev_2024
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -24,9 +25,7 @@ kafka:
   consumer:
     group-id: e-commerce
     key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+    value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     json-value-type: com.app.*
     trusted-packages: "*"
-product:
-  service:
-    env-message: "This is the development environment for Product Service"
+  

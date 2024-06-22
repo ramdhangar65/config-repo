@@ -1,7 +1,7 @@
 spring:
-  messages: "This is from payment-service dev environment"
+  messages: "This is from order-service dev environment"
   datasource:
-    url: jdbc:mysql://localhost:3306/e-commerce-dev-2024
+    url: jdbc:mysql://localhost:3306/e-commerce-dev_2024
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
